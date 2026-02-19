@@ -1,0 +1,46 @@
+/*
+Two types of dataType : 
+1. Primitive
+    Number
+    String
+    Boolean
+    Null
+    Undefined
+    Symbol
+    BigInt
+2. Non Primitive
+    Array
+    Object
+    Function
+
+*/
+
+console.log("Primitive Data Types:");
+const num = 42;
+const str = "Hello, World!";
+const bool = true;
+const nul = null;
+let undef;
+const sym = Symbol("sym");
+const bigInt = 9007199254740991n;
+
+console.log({ num, str, bool, nul, undef, sym, bigInt });
+console.log(typeof num); // "number"
+console.log(typeof str); // "string"
+console.log(typeof bool); // "boolean"
+console.log(typeof nul);
+console.log(typeof undef); // "undefined"
+console.log(typeof sym);
+console.log(typeof bigInt); // "bigint"
+
+console.log("\nNon-Primitive Data Types:");
+const arr = [1, 2, 3];
+const obj = { name: "Alice", age: 30 };
+function greet() {
+    return "Hello!";
+}
+
+console.log({ arr, obj, greet });
+console.log(typeof arr); // "object"
+console.log(typeof obj); // "object"
+console.log(typeof greet); // "function"
