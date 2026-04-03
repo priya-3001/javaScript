@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addNewLang(langName){
+        const li = document.createElement('li')
+        li.innerText = langName
+        document.querySelector('.language').appendChild(li)
+    }
+
+    function addOptionalLang(langName){
+        const li = document.createElement('li')
+       const text = document.createTextNode(langName)
+       li.appendChild(text)
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addNewLang("Python")
+    addOptionalLang("Java")
+
+    //Edit
+    function editLang(oldLang, newLang){
+       const languages = document.querySelectorAll('.language li')
+       languages.forEach((lang) => {
+        if(lang.textContent === oldLang){
+            console.log('Old lang is ${oldLang} which is replaced with ${newLang}');
+            lang.textContent = newLang
+            
+       }
+    })}
+    editLang("Python", "C++")
+
+    //Delete
+    function deleteLang(langName){
+        const languages = document.querySelectorAll('.language li')
+        languages.forEach((lang) => {
+         if(lang.textContent === langName){
+             console.log('Lang to be deleted is ${langName}');
+             lang.remove()
+             
+        }
+     })
+    }
+deleteLang("Java")
+</script>
+</html>
